@@ -1,0 +1,69 @@
+.aboutImage {
+	margin-top: 25px;
+	width: 300px;
+}
+.article {
+  background: #FF6978;
+  margin-bottom: -5px;
+	padding-right: 400px;
+}
+.articletitle {
+  color: white !important;
+}
+
+.bodytext {
+  font-size: 1.5em;
+}
+
+.description {
+	font-family: raleway !important;
+}
+
+.emberfont {
+	color: #07003b;
+	font-family: inconsolata;
+	font-weight: 1000 !important;
+	letter-spacing: 1px;
+}
+
+.emberlogo {
+    padding-left: 30px;
+}
+
+.embernav {
+	background: #FFFFFF;
+}
+
+.navitem:hover {
+	background: #FFFFFF !important;
+}
+
+.navitemtext {
+	color: #07003b;
+}
+
+.navitemtext:hover {
+	/* border-bottom: 10px solid yellow !important;
+	transition: 1s; */
+  background-image: linear-gradient(120deg, #1D62E2 0%, #1D62E2 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 94%;
+  transition: background-size 0.25s ease-in;
+}
+
+.yellowify {
+	background: #FF6978;
+	color: white;
+	padding-right: 10px;
+}
+
+@font-face {
+    font-family: inconsolata;
+    src: url(Inconsolata.otf);
+}
+
+@font-face {
+	font-family: raleway;
+	src: url(Raleway-Light.ttf);
+}

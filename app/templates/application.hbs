@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<nav>
+	<div class="embernav nav-wrapper">
+	  <span class="emberlogo">
+	    <a href="/" class="emberfont brand-logo"><span class="navitemtext">Cheesecorn 🌽</span></a>
+	  </span>
+	  <ul id="nav-mobile" class="emberfont right hide-on-med-and-down">
+        <li><a class="emberfont navitem" href="/about"><span class="navitemtext">About</span></a></li>
+    </ul>
+	</div>
+</nav>
 
-{{outlet}}
+<div class="body">
+	{{outlet}}
+</div>
