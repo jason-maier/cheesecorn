@@ -8,10 +8,15 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('about');
-  this.route('learning', { path: '/learning' }, function(){
-    this.route('cs50', {path: '/cs50'})
+  this.route('learning', function(){
+    this.route('cs50')
+    this.route('ember')
   });
-  this.route('stuff', { path: '/stuff' });
+  this.route('stuff');
+  this.route('plants', {path: '/plants'}, function(){
+    this.route('index', { path: '/' });
+    this.route('plant', { path: '/:plant_id' });
+  })
 });
 
 export default Router;

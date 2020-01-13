@@ -67,3 +67,23 @@
 	font-family: raleway;
 	src: url(Raleway-Light.ttf);
 }
+
+/* Plants Section */
+.plant {
+  margin-top: 15px;
+}
+
+.plantContent {
+  font-size: 1.25em;
+}
+
+.plantSection {
+  font-size: 1.5em;
+  text-decoration: underline #1D62E2;
+}
+
+.plantTitle {
+  font-size: 3em;
+  margin-top: -15px;
+  text-decoration: underline #1D62E2;
+}

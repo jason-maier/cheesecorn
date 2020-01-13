@@ -1,0 +1,16 @@
+{{#each model as |plant|}}
+  <div class="row">
+  <div class="row">
+    <h3 class="article emberfont col s5 offset-s2">
+      <a href="/plants/{{plant.name}}">
+        <span class="articletitle navitemtext"> {{plant.name}} </span>
+      </a>
+    </h3>
+    <p class="emberfont bodytext col s6 offset-s2">
+      How to take care of your {{plant.name}} plant.
+    </p>
+  </div>
+</div>
+{{/each}}
+
+{{outlet}}
