@@ -87,3 +87,14 @@
   margin-top: -15px;
   text-decoration: underline #1D62E2;
 }
+
+/* Learning Section */
+.learningSection {
+  font-size: 2em;
+  text-decoration: underline #1D62E2;
+}
+
+.learningTitle {
+  font-size: 3em;
+  text-decoration: underline #1D62E2;
+}

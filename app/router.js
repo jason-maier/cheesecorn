@@ -10,7 +10,11 @@ Router.map(function() {
   this.route('about');
   this.route('learning', function(){
     this.route('cs50')
-    this.route('ember')
+    this.route('ember', function() {
+      this.route('concept', {
+        path: ':concept_id'
+      });
+    })
   });
   this.route('stuff');
   this.route('plants', {path: '/plants'}, function(){
