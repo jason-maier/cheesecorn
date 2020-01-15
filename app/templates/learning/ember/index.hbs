@@ -1,5 +1,10 @@
-{{#each model as |concept|}}
-  <div class="row">
+<div class="row">
+  <h1 class="emberfont col s6 offset-s1"> Ember Concepts </h1>
+  <p class="emberfont bodytext col s10 offset-s1">
+    I mostly write in Ember and I still haven't completely grasped the Ember way of doing things, which sometimes makes my day much more difficult.
+    As part of my effort of trying to come to grips with the Ember way I thought I'd at least start by going over the concepts.
+  </p>
+  {{#each model as |concept|}}
   <div class="row">
     <h3 class="article emberfont col s5 offset-s2">
       <a href="/learning/ember/{{concept.name}}">
@@ -7,8 +12,8 @@
       </a>
     </h3>
     <p class="emberfont bodytext col s6 offset-s2">
-      Getting started with {{concept.name}}.
+      {{concept.description}}
     </p>
   </div>
+  {{/each}}
 </div>
-{{/each}}

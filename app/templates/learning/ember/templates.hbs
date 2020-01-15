@@ -14,6 +14,21 @@
         Templates are a bunch of HTML and dynamic elements that get compiled by your Ember application and rendered in the DOM.
         Ember uses the Handlebars templating library.
       </span>
+      <p class="emberfont learningSection"> Here is an example basic template:</p>
+      <pre>
+        <code class="language-handlebars">
+          <div class="row">
+            <h3>
+              <a href="/learning/ember/{{concept.name}}">
+                <span class="articletitle navitemtext"> {{concept.name}} </span>
+              </a>
+            </h3>
+            <p>
+              {{concept.description}}
+            </p>
+          </div>
+        </code>
+      </pre>
       <p class="emberfont learningSection"> Quick tips</p>
       <ul class="plantContent">
         <li>
