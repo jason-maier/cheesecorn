@@ -1,3 +1,7 @@
+body {
+  font-family: OpenSans;
+}
+
 .aboutImage {
 	margin-top: 25px;
 	width: 300px;
@@ -9,21 +13,38 @@
 }
 .articletitle {
   color: white !important;
+  font-family: 'lato';
+}
+
+.navtitle {
+  font-family: 'lato-bold';
+}
+
+.sectiontitle {
+  color: white !important;
+  font-family: 'lato-bold';
+  font-size: .9em;
+}
+
+.sectiontitle:hover {
+  background-image: linear-gradient(120deg, #1D62E2 0%, #1D62E2 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 94%;
+  transition: background-size 0.25s ease-in;
 }
 
 .bodytext {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 1em;
 }
 
 .description {
-	font-family: raleway !important;
+	font-family: OpenSans !important;
 }
 
 .emberfont {
 	color: #07003b;
-	font-family: inconsolata;
-	font-weight: 1000 !important;
 	letter-spacing: 1px;
 }
 
@@ -44,8 +65,6 @@
 }
 
 .navitemtext:hover {
-	/* border-bottom: 10px solid yellow !important;
-	transition: 1s; */
   background-image: linear-gradient(120deg, #1D62E2 0%, #1D62E2 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.4em;
@@ -53,20 +72,25 @@
   transition: background-size 0.25s ease-in;
 }
 
-.yellowify {
+.background {
 	background: #FF6978;
 	color: white;
 	padding-right: 10px;
 }
 
 @font-face {
-    font-family: inconsolata;
-    src: url(Inconsolata.otf);
+    font-family: lato;
+    src: url(Lato-Regular.ttf);
 }
 
 @font-face {
-	font-family: raleway;
-	src: url(Raleway-Light.ttf);
+  font-family: lato-bold;
+  src: url(Lato-Bold.ttf);
+}
+
+@font-face {
+	font-family: OpenSans;
+	src: url(OpenSans-Regular.ttf);
 }
 
 /* Plants Section */
@@ -79,11 +103,13 @@
 }
 
 .plantSection {
+  font-family: 'lato-bold';
   font-size: 1.5em;
   text-decoration: underline #1D62E2;
 }
 
 .plantTitle {
+  font-family: 'lato-bold';
   font-size: 3em;
   margin-top: -15px;
   text-decoration: underline #1D62E2;
@@ -91,11 +117,21 @@
 
 /* Learning Section */
 .learningSection {
+  font-family: 'lato-bold';
   font-size: 2em;
   text-decoration: underline #1D62E2;
 }
 
 .learningTitle {
+  font-family: 'lato-bold';
   font-size: 3em;
   text-decoration: underline #1D62E2;
 }
+
+/* About Section */
+.aboutTitle {
+  font-family: 'lato-bold';
+  font-size: 3em;
+  margin-top: 5px;
+}
+
