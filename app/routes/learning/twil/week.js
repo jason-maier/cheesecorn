@@ -1,0 +1,21 @@
+import Prism from 'prismjs';
+import Route from '@ember/routing/route';
+import { run } from '@ember/runloop'
+
+export default Route.extend({
+  model(params) {
+    console.log(params)
+    return params.week_id;
+  },
+
+  renderTemplate(controller, model) {
+    this.render(`learning/twil/${model}`);
+  },
+
+  actions: {
+    activate() {
+      this._super(...arguments);
+      run.scheduleOnce('afterRender', Prism.highlightAll);
+    }
+  }
+});

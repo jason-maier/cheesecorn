@@ -2,6 +2,10 @@ body {
   font-family: OpenSans;
 }
 
+li {
+  display: list-item;
+}
+
 .aboutImage {
 	margin-top: 25px;
 	width: 300px;

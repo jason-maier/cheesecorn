@@ -9,7 +9,11 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('about');
   this.route('learning', function(){
-    this.route('cs50')
+    this.route('twil', function() {
+      this.route('week', {
+        path: ':week_id'
+      });
+    })
     this.route('ember', function() {
       this.route('concept', {
         path: ':concept_id'

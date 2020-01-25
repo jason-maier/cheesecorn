@@ -1,0 +1,39 @@
+<div class="row">
+  <h1 class="center-align emberfont learningTitle"> This week I learned #1 </h1>
+  <p class="center-align"><i>January 25th, 2020</i></p>
+</div>
+<div class="row">
+  <span class="col s8 offset-s2">
+    <p>
+      <h4><b>Some Awesome Ember Helpers: notEmpty and isEmpty</b></h4>
+      <p class="plantContent">
+        This week these Ember helpers really helped me out. I was trying to work with some properties
+        on an endpoint that would in some cases return null. Obviously using something like `reads` for this
+        would return an error. notEmpty and isEmpty to the rescue.
+      </p>
+      <p class="plantContent">
+        <h5><b>notEmpty</b></h5>
+        <blockquote>
+          A computed property that returns true if the value of the dependent property is NOT null, an empty string, empty array, or empty function.
+        </blockquote>
+      </p>
+      <p class="plantContent">
+        <h5><b>isEmpty</b></h5>
+        <blockquote>
+          A computed property that returns true if the value of the dependent property IS null, an empty string, empty array, or empty function.
+        </blockquote>
+      </p>
+    </p>
+    <pre>
+        <code class='language-javascript'>
+          import { notEmpty } from '@ember/object/computed';
+
+          export default Component.extend({
+          ...
+
+          hasProperty: notEmpty('Property')
+        </code>
+      </pre>
+      <p>For more on these see <a href="http://api.emberjs.com/ember/release/functions/@ember%2Fobject%2Fcomputed/notEmpty">the Ember documentation</a>.</p>
+  </span>
+</div>
