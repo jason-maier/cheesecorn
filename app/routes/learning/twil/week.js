@@ -3,8 +3,15 @@ import Route from '@ember/routing/route';
 import { run } from '@ember/runloop'
 
 export default Route.extend({
+  buildRouteInfoMetadata() {
+    return {
+      breadcrumb(model) {
+        return model;
+      }
+    };
+  },
+
   model(params) {
-    console.log(params)
     return params.week_id;
   },
 

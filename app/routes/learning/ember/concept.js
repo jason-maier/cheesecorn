@@ -3,6 +3,14 @@ import Route from '@ember/routing/route';
 import { run } from '@ember/runloop'
 
 export default Route.extend({
+  buildRouteInfoMetadata() {
+    return {
+      breadcrumb(model) {
+        return model;
+      }
+    };
+  },
+
   model(params) {
     return params.concept_id;
   },

@@ -6,6 +6,12 @@ li {
   display: list-item;
 }
 
+.breadcrumbs {
+  font-family: 'lato-bold';
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
 .aboutImage {
 	margin-top: 25px;
 	width: 300px;

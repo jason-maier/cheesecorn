@@ -12,5 +12,21 @@
 </nav>
 
 <div class="body">
+  {{#if this.breadcrumbs}}
+    <div class="breadcrumbs row">
+      <div class="col s3 offset-s1">
+        {{#each this.breadcrumbs as |breadcrumb|}}
+          {{#if breadcrumb.isCurrentPage}}
+            <span>{{breadcrumb.label}}</span>
+          {{else}}
+            <LinkTo @route={{breadcrumb.route}}>
+              {{breadcrumb.label}}
+            </LinkTo>
+            <span>></span>
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
 	{{outlet}}
 </div>
