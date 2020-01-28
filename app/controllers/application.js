@@ -11,12 +11,11 @@ export default Controller.extend({
   router: inject(),
 
   breadcrumbs: computed("router.currentRoute", function() {
-    let activeRoutes = parents(this.router.currentRoute);
+    let activeRoutes = parents(this.router.currentRoute).filter(route => route.localName !== "index");
 
-    if(activeRoutes.length <= 2) return
+    if(activeRoutes.length < 2) return
 
     return activeRoutes
-      .filter(route => route.localName !== "index")
       .map(route => ({
         label: route.metadata && route.metadata.breadcrumb
         ? capitalize(route.metadata.breadcrumb(route.attributes))
