@@ -13,7 +13,7 @@ export default Route.extend({
   model() {
     return [
       {
-        description: 'Placeholder',
+        description: 'Some helpful helpers and route info metadata',
         name: 'TWIL #1',
         number: 1,
         week: 'January 25th, 2020',
