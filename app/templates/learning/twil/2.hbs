@@ -1,0 +1,77 @@
+<div class="row">
+  <h1 class="center-align emberfont learningTitle"> This week I learned #2 </h1>
+  <p class="center-align"><i>February 19th, 2020</i></p>
+</div>
+<div class="row">
+  <span class="col s8 offset-s2">
+    <h4><b>System Fonts</b></h4>
+    <p class="plantContent">
+      Recently we moved over the product I work on from a set of custom fonts to system fonts. From a technical standpoint
+      I understood why we were doing this. From a design standpoint I was super confused why it was so easy to get support for
+      this initiative. My understanding of system fonts meant that by introducing them to the produce means introducing a great deal
+      of variability to your product since you lose a bit of control over what it's going to look like since it will look a bit different
+      depending on the device.
+    </p>
+    <p class="plantContent">
+      That was until I read this <a target='_blank' href='https://medium.com/needmore-notes/using-system-fonts-for-web-apps-bf76d214a0e0'>incredible Medium article</a>
+      and had more conversations that I finally had my "a-ha" moment about system fonts.
+      <b>At the end of the day, system fonts simply makes the interface look like a user expects.</b>
+    </p>
+    <p class="plantContent">
+      This means that if a user is using our product and switches over to Github, <a target='_blank' href='https://css-tricks.com/shipping-system-fonts-github-com/'>
+        which also uses a system font stack and wrote a great article on the process
+      </a>, they don't have to acclimate to a different font environment.
+      and had more conversations that I finally had my "a-ha" moment about system fonts.
+      <b>At the end of the day, system fonts simply makes the interface look like a user expects.</b>
+    </p>
+    <p class="plantContent">
+      Even in the few days after this changed was released I feel like I have to think less to find the things I need to find.
+      This is a very nice thing for an interface I have to stare at for hours at a time.
+    </p>
+    <p class="plantContent">
+      This quote from the previously mentioned <a target='_blank' href='https://medium.com/needmore-notes/using-system-fonts-for-web-apps-bf76d214a0e0'>Medium article</a>
+      succinctly sums up what it took me a second to comprehend.
+    </p>
+    <blockquote>
+      Users will appreciate it, even if they can’t put their finger on why.
+    </blockquote>
+    <pre><code class='language-css'>body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }</code></pre>
+    <p>This example shows how Github uses the system font stack.</p>
+    <p>Great resource for <a target="_blank" href="https://css-tricks.com/snippets/css/system-font-stack/">system font stacks</a>.</p>
+  </span>
+</div>
+<div class="row">
+  <span class="col s8 offset-s2">
+    <h4><b>Which goes first the header or the link?</b></h4>
+    <p class="plantContent">
+      This is a quick and cool thing I learned this week from some pull request feedback and this <a target="_blank" href="https://css-tricks.com/link-header-header-link/">CSS Tricks article</a> that was sent to me.
+    </p>
+    Some examples to understand what the difference is.
+    <pre><code class='language-markup multi'>
+      &lt;h1>
+        &lt;a href='/learning/twil/2'>
+          Header then link
+        &lt;/a>
+      &lt;/h1>
+
+      &lt;a href='/learning/twil/2'>
+        &lt;h1>
+          Header then link
+        &lt;/h1>
+      &lt;/a>
+    </code></pre>
+    <p class="plantContent">
+      The CSS tricks article does a great job of explaining the differences. My maint akeaway is that you should do headers then links because it makes
+      the click area a bit more intuitive.
+    </p>
+  </span>
+</div>
+<div class="row">
+  <span class="col s8 offset-s2">
+    <h5><b>Reactivity</b></h5>
+    <p class="plantContent">
+      I haven't completed it yet but I started reading <a target='_blank' href='https://www.pzuraq.com/what-is-reactivity/'>this series</a> on how
+      Ember Octane is going to improve Ember's reactivity.
+    </p>
+  </span>
+</div>

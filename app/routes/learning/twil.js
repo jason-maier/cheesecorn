@@ -18,6 +18,12 @@ export default Route.extend({
         number: 1,
         week: 'January 25th, 2020',
       },
+      {
+        description: 'System fonts, Headers and Links, and reactivity',
+        name: 'TWIL #2',
+        number: 2,
+        week: 'February 19th, 2020',
+      },
     ];
   },
 });

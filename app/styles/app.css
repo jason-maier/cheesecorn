@@ -2,9 +2,28 @@ body {
   font-family: OpenSans;
 }
 
+blockquote {
+  border-left: 5px solid #1D62E2;
+  font-size: 1.1em;
+}
+
 li {
   display: list-item;
 }
+
+/* Styling for syntax highlighting */
+code[class*="language-"],
+pre[class*="language-"] {
+  padding: 15px;
+  tab-size: 2 !important;
+  white-space: pre-wrap !important;
+}
+
+code[class*="multi"],
+pre[class*="multi"] {
+  padding: 0 !important;
+}
+
 
 .breadcrumbs {
   font-family: 'lato-bold';
@@ -109,7 +128,7 @@ li {
 }
 
 .plantContent {
-  font-size: 1.25em;
+  font-size: 1.19em;
 }
 
 .plantSection {
