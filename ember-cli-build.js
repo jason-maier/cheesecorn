@@ -5,8 +5,17 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
-    'prism': {
-      'theme': 'okadia',
+    postcssOptions: {
+      // Used if source files are CSS
+      compile: {
+        plugins: [
+          { module: require('postcss-import') },
+          require('tailwindcss')('./app/styles/tailwind.js'),
+        ]
+      },
+    },
+    prism: {
+      theme: 'okadia',
     }
   });
 
