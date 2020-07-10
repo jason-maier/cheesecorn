@@ -1,31 +1,37 @@
-<nav>
-	<div class="embernav nav-wrapper">
-	  <span class="emberlogo">
-	    <a href="/" class="emberfont brand-logo"><span class="navitemtext navtitle">Cheesecorn 🌽</span></a>
-	  </span>
-	  <ul id="nav-mobile" class="emberfont right hide-on-med-and-down">
-      <li><a class="emberfont navitem navtitle" href="/learning"><span class="navitemtext">Learning</span></a></li>
-      <li><a class="emberfont navitem navtitle" href="/stuff"><span class="navitemtext">Stuff</span></a></li>
-      <li><a class="emberfont navitem navtitle" href="/about"><span class="navitemtext">About</span></a></li>
-    </ul>
-	</div>
+<nav class="border-b border-gray-300 flex items-center justify-between flex-wrap p-2 pl-10">
+  <div class="flex items-center mr-6">
+    <span class="font-semibold navitemtext text-3xl tracking-tight">
+      <a href="/">Cheesecorn 🌽</a>
+    </span>
+  </div>
+  <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+    <div class="font-semibold text-sm lg:flex-grow">
+      <a href="/learning" class="block mt-4 lg:inline-block lg:mt-0 navitemtext mr-4">
+        Learning
+      </a>
+      <a href="/stuff" class="block mt-4 lg:inline-block lg:mt-0 navitemtext mr-4">
+        Stuff
+      </a>
+      <a href="/about" class="block mt-4 lg:inline-block lg:mt-0 navitemtext">
+        About
+      </a>
+    </div>
+  </div>
 </nav>
 
 <div class="body">
   {{#if this.breadcrumbs}}
-    <div class="breadcrumbs row">
-      <div class="col s3 offset-s1">
-        {{#each this.breadcrumbs as |breadcrumb|}}
-          {{#if breadcrumb.isCurrentPage}}
-            <span>{{breadcrumb.label}}</span>
-          {{else}}
-            <LinkTo @route={{breadcrumb.route}}>
-              {{breadcrumb.label}}
-            </LinkTo>
-            <span>></span>
-          {{/if}}
-        {{/each}}
-      </div>
+    <div class="breadcrumbs flex flex-row font-semibold ml-12 mt-2 text-sm">
+      {{#each this.breadcrumbs as |breadcrumb|}}
+        {{#if breadcrumb.isCurrentPage}}
+          <span class='ml-2'>{{breadcrumb.label}}</span>
+        {{else}}
+          <LinkTo class='text-blue-500 ml-2' @route={{breadcrumb.route}}>
+            {{breadcrumb.label}}
+          </LinkTo>
+          <span class='ml-2'>></span>
+        {{/if}}
+      {{/each}}
     </div>
   {{/if}}
 	{{outlet}}

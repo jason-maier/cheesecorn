@@ -6,6 +6,6 @@
 @import "code";
 
 @font-face {
-	font-family: OpenSans;
+	font-family: 'Open Sans';
 	src: url(app/fonts/OpenSans-Light.ttf) format('truetype');
 }

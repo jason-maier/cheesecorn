@@ -1,3 +1,4 @@
+/* Element styling */
 body {
   font-family: 'Open Sans';
   font-size: 1.1em;
@@ -5,7 +6,6 @@ body {
 
 blockquote {
   border-left: 5px solid #1D62E2;
-  font-size: 1.1em;
 }
 
 li {
@@ -25,41 +25,13 @@ pre[class*="multi"] {
   padding: 0 !important;
 }
 
-
-.breadcrumbs {
-  font-family: 'Lato';
-  font-weight: 900;
-  margin-bottom: 0px;
-  margin-top: 5px;
-}
-
-.aboutImage {
-	margin-top: 25px;
-	width: 300px;
-}
 .article {
   background: #FF6978;
+  color: white !important;
   margin-bottom: -5px;
-	padding-right: 400px;
-}
-.articletitle {
-  color: white !important;
-  font-family: 'Lato';
 }
 
-.navtitle {
-  font-family: 'Lato';
-  font-weight: 900;
-}
-
-.sectiontitle {
-  color: white !important;
-  font-family: 'Lato';
-  font-weight: 900;
-  font-size: .9em;
-}
-
-.sectiontitle:hover {
+.articleTitle:hover {
   background-image: linear-gradient(120deg, #1D62E2 0%, #1D62E2 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.4em;
@@ -67,34 +39,15 @@ pre[class*="multi"] {
   transition: background-size 0.25s ease-in;
 }
 
-.bodytext {
-  font-size: 1.2em;
-  margin-top: 1em;
-}
-
-.description {
-	font-family: 'Open Sans' !important;
-}
-
-.emberfont {
+.styledFont {
 	color: #07003b;
 	letter-spacing: 1px;
 }
 
-.emberlogo {
-    padding-left: 30px;
-}
-
-.embernav {
-	background: #FFFFFF;
-}
-
-.navitem:hover {
-	background: #FFFFFF !important;
-}
-
 .navitemtext {
-	color: #07003b;
+  color: #07003b;
+  font-family: 'Open Sans';
+  letter-spacing: 1px;
 }
 
 .navitemtext:hover {
@@ -111,29 +64,6 @@ pre[class*="multi"] {
 	padding-right: 10px;
 }
 
-/* Plants Section */
-.plant {
-  margin-top: 15px;
-}
-
-.plantContent {
-  font-size: 1.19em;
-}
-
-.plantSection {
-  font-family: 'Lato';
-  font-size: 1.5em;
-  font-weight: 900;
-  text-decoration: underline #1D62E2;
-}
-
-.plantTitle {
-  font-family: 'Lato';
-  font-size: 3em;
-  margin-top: -15px;
-  text-decoration: underline #1D62E2;
-}
-
 /* Learning Section */
 .learningSection {
   font-family: 'Lato';
@@ -147,13 +77,5 @@ pre[class*="multi"] {
   font-size: 3em;
   font-weight: 900;
   text-decoration: underline #1D62E2;
-}
-
-/* About Section */
-.aboutTitle {
-  font-family: 'Lato';
-  font-size: 3em;
-  font-weight: 900;
-  margin-top: 5px;
 }
 

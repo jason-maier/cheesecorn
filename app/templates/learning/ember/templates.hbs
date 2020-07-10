@@ -1,47 +1,47 @@
-<div class="row">
-  <h1 class="center-align emberfont learningTitle"> Using Templates in Ember </h1>
-</div>
-<div class="row">
-  <span class="col s8 offset-s2">
-    <p>
-      <p class="plantContent">
-        If you're beginning your dive into Ember concepts templates are a great place to start.
-        They're the building block of your Ember application and interact with and are modified by most other Ember concepts.
-        There's a reason the official Ember documentation begins by defining and demystiying templates.
+<div class="mb-12 ml-6 md:ml-56 lg:ml-64 w-4/5 md:w-3/5 lg:w-3/5">
+  <h1 class="font-sans text-6xl styledFont"> Using Templates in Ember </h1>
+  <div class="row">
+    <span class="col s8 offset-s2">
+      <p>
+        <p class="mb-2">
+          If you're beginning your dive into Ember concepts templates are a great place to start.
+          They're the building block of your Ember application and interact with and are modified by most other Ember concepts.
+          There's a reason the official Ember documentation begins by defining and demystiying templates.
+        </p>
+        <h4 class="font-sans mb-2 text-3xl">Explain templates like I'm five</h4>
+        <span class="plantContent">
+          Templates are a bunch of HTML and dynamic elements that get compiled by your Ember application and rendered in the DOM.
+          Ember uses the Handlebars templating library.
+        </span>
+        <h4 class="font-sans mb-2 text-3xl">Here is an example basic template:</h4>
+        <pre>
+          <code class='language-markup'>
+            &lt;div class=&quot;row&quot;&gt;
+              &lt;h3&gt;
+                &lt;a href=&quot;/learning/ember/\{{concept.name}}&quot;&gt;
+                  &lt;span class=&quot;articletitle navitemtext&quot;&gt; \{{concept.name}} &lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/h3&gt;
+              &lt;p&gt;
+                \{{concept.description}}
+              &lt;/p&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <h4 class="font-sans mb-2 text-3xl">Quick tips</h4>
+        <ul class="collection plantContent">
+          <li class="collection-item">
+            The Handlebars library will fail silently if your template looks for a property that does not exist.
+            This is great for building flexible templates that can accomodate objects with small differences in properties.
+          </li>
+          <li class="collection-item">
+            You can use self-closing syntax for things elements such as divs that aren't typical self-closing HTML tags.
+          </li>
+          <li class="collection-item">
+            You cannot use `script` tags in your template.
+          </li>
+        </ul>
       </p>
-      <p class="emberfont learningSection"> Explain templates like I'm five</p>
-      <span class="plantContent">
-        Templates are a bunch of HTML and dynamic elements that get compiled by your Ember application and rendered in the DOM.
-        Ember uses the Handlebars templating library.
-      </span>
-      <p class="emberfont learningSection"> Here is an example basic template:</p>
-      <pre>
-        <code class='language-markup'>
-          &lt;div class=&quot;row&quot;&gt;
-            &lt;h3&gt;
-              &lt;a href=&quot;/learning/ember/\{{concept.name}}&quot;&gt;
-                &lt;span class=&quot;articletitle navitemtext&quot;&gt; \{{concept.name}} &lt;/span&gt;
-              &lt;/a&gt;
-            &lt;/h3&gt;
-            &lt;p&gt;
-              \{{concept.description}}
-            &lt;/p&gt;
-          &lt;/div&gt;
-        </code>
-      </pre>
-      <p class="emberfont learningSection"> Quick tips</p>
-      <ul class="collection plantContent">
-        <li class="collection-item">
-          The Handlebars library will fail silently if your template looks for a property that does not exist.
-          This is great for building flexible templates that can accomodate objects with small differences in properties
-        </li>
-        <li class="collection-item">
-          You can use self-closing syntax for things elements such as divs that aren't typical self-closing HTML tags.
-        </li>
-        <li class="collection-item">
-          You cannot use `script` tags in your template.
-        </li>
-      </ul>
-    </p>
-  </span>
+    </span>
+  </div>
 </div>

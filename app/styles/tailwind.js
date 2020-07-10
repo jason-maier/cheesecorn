@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'sans': ['OpenSans'],
+      'sans': ['Open Sans'],
     }
   },
   variants: {},
