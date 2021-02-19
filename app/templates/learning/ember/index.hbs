@@ -1,19 +1,14 @@
 <div class="flex-row ml-56">
-  <h1 class="font-sans text-6xl styledFont"> Ember Concepts </h1>
-  <p class="styledFont mb-6 mt-6 text-xl w-5/6">
-    I mostly write in Ember and I still haven't completely grasped the Ember way of doing things, which sometimes makes my day much more difficult.
-    As part of my effort of trying to come to grips with the Ember way I thought I'd at least start by going over the concepts.
-  </p>
+  <SectionTitle
+    @subtitle="I mostly write in Ember and I still haven't completely grasped the Ember way of doing things, which sometimes makes my day much more difficult.
+    As part of my effort of trying to come to grips with the Ember way I thought I'd at least start by going over the concepts."
+    @title="Ember Concepts"
+  />
   {{#each model as |concept|}}
-  <div class="flex-row mb-6 ml-6 w-1/3">
-    <h3 class="h-12 article styledFont">
-      <a href="/learning/ember/{{concept.name}}">
-        <span class="font-medium ml-6 text-3xl articleTitle"> {{concept.name}} </span>
-      </a>
-    </h3>
-    <p class="styledFont mt-6 text-l">
-      {{concept.description}}
-    </p>
-  </div>
+    <Card
+      @href={{concat "/learning/ember/" concept.name}} 
+      @subtitle={{concept.description}}
+      @title={{concept.name}}
+    />
   {{/each}}
 </div>

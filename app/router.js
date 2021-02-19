@@ -20,7 +20,6 @@ Router.map(function() {
       });
     })
   });
-  this.route('stuff');
   this.route('plants', {path: '/plants'}, function(){
     this.route('index', { path: '/' });
     this.route('plant', { path: '/:plant_id' });

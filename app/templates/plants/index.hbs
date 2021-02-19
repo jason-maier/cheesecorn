@@ -1,19 +1,11 @@
 
 <div class="flex-row ml-56">
-  <h1 class="font-sans text-6xl styledFont"> Plants </h1>
-  <p class="styledFont mb-6 mt-6 text-xl w-5/6">
-    Simple guides for taking care of your house plants.
-  </p>
+  <SectionTitle @subtitle="Simple guides for taking care of your house plants." @title="Plants" />
   {{#each model as |plant|}}
-    <div class="flex-row mb-6 ml-6 w-1/3">
-      <h3 class="h-12 article styledFont">
-        <a href="/plants/{{plant.name}}">
-          <span class="font-medium ml-6 text-3xl articleTitle"> {{plant.name}} </span>
-        </a>
-      </h3>
-      <p class="styledFont mt-6 text-l">
-        {{plant.description}}
-      </p>
-    </div>
+    <Card
+      @href={{concat "/plants/" plant.name}}
+      @subtitle={{plant.description}}
+      @title={{plant.name}}
+    />
   {{/each}}
 </div>

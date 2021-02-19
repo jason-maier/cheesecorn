@@ -1,6 +1,10 @@
 /* Element styling */
+a:not(.articleTitle, .navitemtext) {
+  color: #1D62E2;
+}
+
 body {
-  font-family: 'Open Sans';
+  font-family: 'Lato';
   font-size: 1.1em;
 }
 
@@ -12,10 +16,13 @@ li {
   display: list-item;
 }
 
+blockquote, p {
+  margin-bottom: 22px;
+}
+
 /* Styling for syntax highlighting */
 code[class*="language-"],
 pre[class*="language-"] {
-  padding: 15px;
   tab-size: 2 !important;
   white-space: pre-wrap !important;
 }
@@ -26,8 +33,7 @@ pre[class*="multi"] {
 }
 
 .article {
-  background: #FF6978;
-  color: white !important;
+  letter-spacing: 1px;
   margin-bottom: -5px;
 }
 
@@ -37,11 +43,6 @@ pre[class*="multi"] {
   background-size: 100% 0.4em;
   background-position: 0 94%;
   transition: background-size 0.25s ease-in;
-}
-
-.styledFont {
-	color: #07003b;
-	letter-spacing: 1px;
 }
 
 .navitemtext {

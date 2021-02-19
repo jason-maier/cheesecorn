@@ -1,73 +1,74 @@
 <div class="mb-12 ml-6 md:ml-56 lg:ml-64 w-4/5 md:w-3/5 lg:w-3/5">
-<div class="flex-row mb-6">
-  <h1 class="font-sans text-6xl styledFont"> This week I learned #1 </h1>
-  <p>February 10th, 2020</p>
-</div>
-<div class="flex-row">
-  <span class="col s8 offset-s2">
-    <h4 class="font-sans mb-2 text-3xl"><span class="font-bold">Some Awesome Ember Helpers: notEmpty and isEmpty</span></h4>
-    <p class="mb-2">
-      This week these Ember helpers really helped me out. I was trying to work with some properties
-      on an endpoint that would in some cases return null. Obviously using something like `reads` for this
-      would return an error. notEmpty and isEmpty to the rescue.
-    </p>
-    <h5 class="font-sans mb-2 text-xl"><span class="font-bold">notEmpty</span></h5>
-    <blockquote class="mb-2">
-      <div class="ml-2">
-        A computed property that returns true if the value of the dependent property is NOT null, an empty string, empty array, or empty function.
-      </div>
-    </blockquote>
-    <h5 class="font-sans mb-2 text-xl"><span class="font-bold">isEmpty</span></h5>
-    <blockquote class="mb-2">
-      <div class="ml-2">
-        A computed property that returns true if the value of the dependent property IS null, an empty string, empty array, or empty function.
-      </div>
-    </blockquote>
-    <pre>
-      <code class='language-javascript'>
-        import { notEmpty } from '@ember/object/computed';
+  <div class="flex-row mb-6">
+    <SectionTitle @subtitle="February 10th, 2020" @title="This Week I Learned #1" />
+  </div>
+  <div class="flex-row">
+    <span class="col s8 offset-s2">
+      <Section @title="Some Awesome Ember Helpers: notEmpty and isEmpty">
+        <p class="mb-2">
+          This week these Ember helpers really helped me out. I was trying to work with some properties
+          on an endpoint that would in some cases return null. Obviously using something like `reads` for this
+          would return an error. notEmpty and isEmpty to the rescue.
+        </p>
+        <h5 class="font-sans mb-2 text-xl"><span class="font-bold">notEmpty</span></h5>
+        <blockquote class="mb-2">
+          <div class="ml-2">
+            A computed property that returns true if the value of the dependent property is NOT null, an empty string, empty array, or empty function.
+          </div>
+        </blockquote>
+        <h5 class="font-sans mb-2 text-xl"><span class="font-bold">isEmpty</span></h5>
+        <blockquote class="mb-2">
+          <div class="ml-2">
+            A computed property that returns true if the value of the dependent property IS null, an empty string, empty array, or empty function.
+          </div>
+        </blockquote>
+<pre>
+<code class='language-javascript'>
+  import { notEmpty } from '@ember/object/computed';
 
-        export default Component.extend({
-        ...
+  export default Component.extend({
+  ...
 
-        hasProperty: notEmpty('Property')
-      </code>
-    </pre>
-    <p>For more on these see <a target="_blank" class="text-blue-800" href="http://api.emberjs.com/ember/release/functions/@ember%2Fobject%2Fcomputed/notEmpty">the Ember documentation</a>.</p>
-  </span>
-</div>
+  hasProperty: notEmpty('Property')
+</code>
+</pre>
+        <p>For more on these see <a target="_blank" class="text-blue-800" href="http://api.emberjs.com/ember/release/functions/@ember%2Fobject%2Fcomputed/notEmpty">the Ember documentation</a>.</p>
+      </Section>
+    </span>
+  </div>
   <span class="col s8 offset-s2">
-    <h4 class="font-sans mb-2 text-3xl"><span class="font-bold">Route Info Metadata</span></h4>
-    <p class="mb-2">
-      This was mostly inspired by <a target="_blank" href="https://embermap.com/topics/what-s-new-in-ember/routeinfo-metadata-3-10">a great EmberMap video</a> I watched this week.
-      I used what I learned in this video to create the breadcrumbs for this website.
-    </p>
-    <div class="mb-2">
-    The newly added buildRouteInfoMetadata method, which is what is used to build the metadata field that was added to RouteInfo was introduced in <a href="https://github.com/emberjs/rfcs/blob/master/text/0398-RouteInfo-Metadata.md">this RFC</a>.
-    They explain their motivation below:
-    </div>
-    <blockquote class="mb-2">
-      <div class='ml-2'>
-        While the RouteInfo object is sufficient in providing developers metadata about the Route itself, it is not sufficient in layering on application specific metadata about the Route. This metadata could be anything from a more domain-specific name for a Route, e.g. profile_page vs profile.index, all the way to providing contextual data when the Route was visited.
-      </div>
-    </blockquote>
-    <p class="mb-2">
-      RouteInfo.metadata is an optional field. Its value will be whatever you define in buildRouteInfoMetadata.
-    </p>
-    <p class="mb-2">
-      The below example defines the name of the breadcrumb for my index route.
-      If I returned model instead of 'Cheesecorn' the breadcrumb would show up as index which is a bit less intuitive.
-    </p>
-    <pre>
-      <code class='language-javascript'>
-        buildRouteInfoMetadata() {
-          return {
-            breadcrumb() {
-              return 'Cheesecorn';
-            }
-          };
-        }
-      </code>
-    </pre>
+    <Section @title="Route Info Metadata">
+      <p class="mb-2">
+        This was mostly inspired by <a target="_blank" href="https://embermap.com/topics/what-s-new-in-ember/routeinfo-metadata-3-10">a great EmberMap video</a> I watched this week.
+        I used what I learned in this video to create the breadcrumbs for this website.
+      </p>
+      <p class="mb-2">
+        The newly added buildRouteInfoMetadata method, which is what is used to build the metadata field that was added to RouteInfo was introduced in <a href="https://github.com/emberjs/rfcs/blob/master/text/0398-RouteInfo-Metadata.md">this RFC</a>.
+        They explain their motivation below:
+      </p>
+      <blockquote class="mb-2">
+        <div class='ml-2'>
+          While the RouteInfo object is sufficient in providing developers metadata about the Route itself, it is not sufficient in layering on application specific metadata about the Route. This metadata could be anything from a more domain-specific name for a Route, e.g. profile_page vs profile.index, all the way to providing contextual data when the Route was visited.
+        </div>
+      </blockquote>
+      <p class="mb-2">
+        RouteInfo.metadata is an optional field. Its value will be whatever you define in buildRouteInfoMetadata.
+      </p>
+      <p class="mb-2">
+        The below example defines the name of the breadcrumb for my index route.
+        If I returned model instead of 'Cheesecorn' the breadcrumb would show up as index which is a bit less intuitive.
+      </p>
+<pre>
+<code class="language-javascript">
+  buildRouteInfoMetadata() {
+    return {
+      breadcrumb() {
+        return 'Cheesecorn';
+      }
+    };
+  }
+</code>
+</pre>
+    </Section>
   </span>
 </div>
