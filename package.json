@@ -51,7 +51,7 @@
     "node": "6.* || 8.* || >= 10.*"
   },
   "dependencies": {
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.24.0",
     "tailwindcss": "^1.4.6"
   }
 }
